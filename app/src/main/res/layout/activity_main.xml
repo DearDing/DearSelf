@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:viewBindingIgnore="true"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@color/main_color"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme"
+                app:theme="@style/OverFlowMenuTheme"
+                app:title="@string/app_name" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp50"
+            app:defaultNavHost="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:navGraph="@navigation/home_navigation" />
+
+        <com.chaychan.library.BottomBarLayout
+            android:id="@+id/bottom_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <com.chaychan.library.BottomBarItem
+                android:layout_width="@dimen/dp0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@mipmap/home_default"
+                app:iconSelected="@mipmap/home_press"
+                app:itemMarginTop="@dimen/dp5"
+                app:itemText="应用"
+                app:itemTextSize="@dimen/sp10"
+                app:textColorNormal="@color/cB1B1B1"
+                app:textColorSelected="@color/black" />
+
+            <com.chaychan.library.BottomBarItem
+                android:layout_width="@dimen/dp0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@mipmap/manage_default"
+                app:iconSelected="@mipmap/manage_press"
+                app:itemMarginTop="@dimen/dp5"
+                app:itemText="工具"
+                app:itemTextSize="@dimen/sp10"
+                app:textColorNormal="@color/cB1B1B1"
+                app:textColorSelected="@color/main_color" />
+
+        </com.chaychan.library.BottomBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

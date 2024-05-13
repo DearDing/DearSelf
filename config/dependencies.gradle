@@ -1,0 +1,25 @@
+ext {
+    AndroidLibs = [
+            core_ktx                : 'androidx.core:core-ktx:1.7.0',
+            appcompat               : 'androidx.appcompat:appcompat:1.4.1',
+            material                : 'com.google.android.material:material:1.5.0',
+            constraintlayout        : 'androidx.constraintlayout:constraintlayout:2.1.3',
+            lifecycle_livedata_ktx  : 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1',
+            lifecycle_viewmodel_ktx : 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1',
+            lifecycle_extensions_ktx: 'androidx.lifecycle:lifecycle-extensions:2.4.1',
+            lifecycle_common        : 'androidx.lifecycle:lifecycle-common:2.6.2',
+            navigation_fragment_ktx : 'androidx.navigation:navigation-fragment-ktx:2.4.1',
+            navigation_ui_ktx       : 'androidx.navigation:navigation-ui-ktx:2.4.1',
+    ]
+    Libs = [
+            BaseRecyclerViewAdapterHelper4: 'io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4',
+            coil                          : 'io.coil-kt:coil:2.5.0',
+            coil_gif                      : 'io.coil-kt:coil-gif:2.5.0',
+            coil_svg                      : 'io.coil-kt:coil-svg:2.5.0',
+            mmkv                          : 'com.tencent:mmkv:1.2.15',
+            immersionbar                  : "com.geyifeng.immersionbar:immersionbar:3.2.2",
+            immersionbar_ktx              : "com.geyifeng.immersionbar:immersionbar-ktx:3.2.2",
+
+
+    ]
+}

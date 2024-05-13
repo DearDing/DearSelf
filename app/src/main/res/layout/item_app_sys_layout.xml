@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp15">
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="@dimen/dp60"
+        android:layout_height="@dimen/dp60"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/c3"
+        android:textSize="@dimen/dp17"
+        app:layout_constraintLeft_toRightOf="@+id/iv_app_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_app_icon"
+        tools:text="app名称" />
+
+    <TextView
+        android:id="@+id/tv_app_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/dp14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_app_name"
+        tools:text="系统" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@+id/tv_app_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+        android:id="@+id/tv_app_package"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_name"
+        android:layout_marginTop="@dimen/dp10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/c6"
+        android:textSize="@dimen/dp14"
+        tools:text="com.addfdf.aisdfshad" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

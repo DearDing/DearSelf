@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.dear.base'
+    compileSdk Versions.compileSdk
+
+    defaultConfig {
+        minSdk Versions.minSdk
+        targetSdk Versions.targetSdk
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    api project(path: ':lib_tools')
+    api project(path: ':lib_http')
+    api project(path: ':lib_res')
+
+    api AndroidLibs.core_ktx
+    api AndroidLibs.appcompat
+    api AndroidLibs.material
+    api AndroidLibs.constraintlayout
+    api AndroidLibs.lifecycle_livedata_ktx
+    api AndroidLibs.lifecycle_viewmodel_ktx
+    api AndroidLibs.lifecycle_common
+    api AndroidLibs.navigation_fragment_ktx
+    api AndroidLibs.navigation_ui_ktx
+
+    api Libs.BaseRecyclerViewAdapterHelper4
+    api Libs.coil
+    api Libs.coil_gif
+    api Libs.coil_svg
+    api Libs.immersionbar
+    api Libs.immersionbar_ktx
+
+    //协程
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
+
+    implementation 'androidx.databinding:databinding-runtime:7.4.2'
+
+}

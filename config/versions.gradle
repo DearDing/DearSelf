@@ -1,0 +1,13 @@
+ext {
+
+    PackageId = 'com.dear.self'
+
+    Versions = [
+            compileSdk : 34,
+            minSdk     : 24,
+            targetSdk  : 34,
+            versionCode: 1,
+            versionName: "1.0"
+    ]
+
+}

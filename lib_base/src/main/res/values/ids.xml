@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_view_binding" type="id" />
+
+    <item name="click_debounce_action" type="id"/>
+    <item name="click_time_stamp" type="id"/>
+</resources>

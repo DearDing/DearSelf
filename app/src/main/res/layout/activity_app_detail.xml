@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.dear.self.applist.AppInfoBean" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/ctl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cmain_app_list"
+                app:collapsedTitleTextAppearance="@style/collapsedTitleTextStyle"
+                app:contentScrim="@color/cmain_app_list"
+                app:expandedTitleMarginEnd="@dimen/dp15"
+                app:expandedTitleTextAppearance="@style/expandedTitleTextStyle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarScrim="@color/cmain_app_list">
+
+                <ImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="@dimen/dp200"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:fitsSystemWindows="true"
+                    android:paddingTop="@dimen/dp50"
+                    android:paddingBottom="@dimen/dp60"
+                    android:src="@{data.appIcon}"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.9" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/tb_toolbar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="@dimen/sp14"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll"
+                    app:theme="@style/OverFlowMenuTheme"
+                    app:title="@{data.name}"
+                    app:titleTextColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="50dp"></LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_share_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/icon_share"
+            app:backgroundTint="@color/cmain_app_list"
+            app:layout_anchor="@+id/appbar"
+            app:layout_anchorGravity="bottom|right" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

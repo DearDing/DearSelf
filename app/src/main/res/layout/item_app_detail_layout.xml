@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin"
+    android:paddingTop="@dimen/dp10"
+    android:paddingRight="@dimen/common_margin"
+    android:paddingBottom="@dimen/dp10">
+
+    <TextView
+        android:id="@+id/tv_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="- -"
+        android:textColor="@color/c3"
+        android:textSize="@dimen/sp14"
+        tools:text="版本号" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- -"
+        android:textColor="@color/c6"
+        android:textSize="@dimen/sp12"
+        tools:text="1.0.0" />
+</LinearLayout>
