@@ -6,7 +6,7 @@ import com.dear.base.utils.ViewBindingUtil
 /**
  * viewBinding 封装
  */
-abstract class BaseViewBindingActivity<DB : ViewBinding> : com.dear.base.activity.BaseActivity() {
+abstract class BaseViewBindingActivity<DB : ViewBinding> : BaseActivity() {
 
     val mDB: DB by lazy {
         ViewBindingUtil.inflateWithGeneric(this, layoutInflater)
