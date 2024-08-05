@@ -8,11 +8,11 @@ import java.lang.reflect.ParameterizedType
 /**
  * dataBinding 封装
  */
-abstract class BaseDataBindingActivity<VM : BaseViewModel, DB : ViewDataBinding> : com.dear.base.activity.BaseViewBindingActivity<DB>() {
+abstract class BaseDataBindingActivity<VM : BaseViewModel, DB : ViewDataBinding> : BaseViewBindingActivity<DB>() {
 
     val mVM: VM by lazy {
         val argument = (this.javaClass.genericSuperclass as ParameterizedType).actualTypeArguments
-        ViewModelProvider(this)[argument[1] as Class<VM>]
+        ViewModelProvider(this)[argument[0] as Class<VM>]
     }
 
     override fun init() {

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.core.view.ViewCompat
+import com.dear.base.activity.BaseDataBindingActivity
 import com.dear.self.R
 import com.dear.self.databinding.ActivityAppDetailBinding
 import com.dear.http.viewmodel.BaseViewModel
@@ -15,7 +16,7 @@ import com.dear.share.ShareTextUtil
 import com.dear.tools.ClipboardManagerUtil
 import java.security.MessageDigest
 
-class AppDetailActivity : com.dear.base.activity.BaseDataBindingActivity<BaseViewModel, ActivityAppDetailBinding>() {
+class AppDetailActivity : BaseDataBindingActivity<BaseViewModel, ActivityAppDetailBinding>() {
 
     private var mPackageName = ""
     private var mAppData: AppInfoBean? = null

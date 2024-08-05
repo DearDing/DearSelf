@@ -4,8 +4,9 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.chaychan.library.BottomBarItem
 import com.chaychan.library.BottomBarLayout
+import com.dear.base.activity.BaseActivity
 
-class MainActivity : com.dear.base.activity.BaseActivity(), BottomBarLayout.OnItemSelectedListener {
+class MainActivity : BaseActivity(), BottomBarLayout.OnItemSelectedListener {
 
     private lateinit var mBottomNavLayout: BottomBarLayout
     private val mController: NavController by lazy {
@@ -36,7 +37,8 @@ class MainActivity : com.dear.base.activity.BaseActivity(), BottomBarLayout.OnIt
         when (currentPosition) {
             0 -> {
                 mController.navigate(R.id.nav_home)
-                throw NullPointerException("空了")
+                //测试异常捕获
+                //throw NullPointerException("空了")
             }
             1 -> {
                 mController.navigate(R.id.nav_gallery)
